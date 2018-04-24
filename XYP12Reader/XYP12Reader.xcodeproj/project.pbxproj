@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2858233B208EE12D00653171 /* XYP12Reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 28582339208EE12D00653171 /* XYP12Reader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		285823FF208F1FCC00653171 /* P12Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285823FE208F1FCC00653171 /* P12Reader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28582336208EE12D00653171 /* XYP12Reader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XYP12Reader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28582339208EE12D00653171 /* XYP12Reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYP12Reader.h; sourceTree = "<group>"; };
 		2858233A208EE12D00653171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285823FE208F1FCC00653171 /* P12Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P12Reader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				28582339208EE12D00653171 /* XYP12Reader.h */,
+				285823FE208F1FCC00653171 /* P12Reader.swift */,
 				2858233A208EE12D00653171 /* Info.plist */,
 			);
 			path = XYP12Reader;
@@ -95,6 +98,7 @@
 				TargetAttributes = {
 					28582335208EE12D00653171 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285823FF208F1FCC00653171 /* P12Reader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +263,7 @@
 		2858233F208EE12D00653171 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -274,9 +280,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaoxinyuan.XYP12Reader;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -284,6 +292,7 @@
 		28582340208EE12D00653171 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -300,6 +309,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gaoxinyuan.XYP12Reader;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
